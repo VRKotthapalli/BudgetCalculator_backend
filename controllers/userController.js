@@ -36,6 +36,7 @@ const loginUser  = async (req,res)=>{
     res.status(201).json({token,message:"User logged in successfully",userId:loggedinUser._id,username:loggedinUser.name});
     }
     catch(error){
+	console.log(error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
     
